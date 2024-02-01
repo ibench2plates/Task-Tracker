@@ -40,10 +40,18 @@ while True:
 
     elif choice == 'V':
         view_tasks()
+
+    
     elif choice == 'D':
         task_index = int(input("Enter task number to mark as complete: "))
         mark_complete(task_index)
         print("Good Job! You have completed the task")
+        else:
+            print("Invalid task index. Please try again.")
+    except ValueError:
+        print("Invalid input. Please enter a valid task index.")
+
+
     elif choice == 'Q':
         print("Exiting Task Tracker. Goodbye!")
         break
